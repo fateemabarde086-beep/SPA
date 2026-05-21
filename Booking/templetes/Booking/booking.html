@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my booking</title>
+    <style>
+            h1{
+                color: navy;
+                text-align: center;
+                transition: 0.5;
+                text-transform: capitalize; 
+                
+            }
+            input{
+                border-radius: 10px;
+                width: 200px;
+                height: 30px;
+            }
+            button{
+                color: white ;
+                background-color: navy;
+            }
+            
+    </style>
+</head>
+<body bgcolor="lightpink">
+    <h1>Welcome to my Booking</h1>
+    <form method="POST" action="{% url 'home' %}"> 
+        {% csrf_token %}
+    <input type="text" placeholder="enter your name"> <br>
+   <p></p>
+    <input type="number" placeholder="enter your age"> <br>
+    <p></p>
+   <input type="email" placeholder="enter your email" > <br>
+   <p></p>
+    <input type="text" placeholder="enter your requirement"> <br>
+   <p></p>
+    <input type="date"placeholder="select date"> <br>
+    <p></p>
+    <input type="time" placeholder="select time"> <br>
+    <p></p>
+    <button>submit</button> 
+    </form>
+    
+    
+</body>
+</html>
